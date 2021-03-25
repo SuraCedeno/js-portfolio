@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "node ./scripts/create-env.js && webpack --mode production --config webpack.config.js",
     "dev": "webpack --config webpack.config.dev.js",
-    "build:watch":"webpack --watch --config webpack.config.js"
+    "build:watch": "webpack --watch --config webpack.config.js",
+    "start":"webpack server --config webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gndx/js-portfolio.git"
+    "url": "git+https://github.com/SuraCedeno/js-portfolio.git"
   },
   "keywords": [
     "javascript",
@@ -21,9 +22,9 @@
   "author": "oscar barajas <oscar@gndx.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gndx/js-portfolio/issues"
+    "url": "https://github.com/SuraCedeno/js-portfolio/issues"
   },
-  "homepage": "https://github.com/gndx/js-portfolio#readme",
+  "homepage": "https://github.com/SuraCedeno/js-portfolio#readme",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/plugin-transform-runtime": "^7.13.10",
